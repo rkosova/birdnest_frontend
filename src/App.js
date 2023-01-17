@@ -15,23 +15,29 @@ const App = () => {
   return (
     <>
       <table className='offenderTable'>
-        <tr>
-          <th></th>
-          <th>Snapshot</th>
-          <th>Distance</th>
-          <th>Pilot ID</th>
-          <th>Name</th>
-          <th>Last Name</th>
-          <th>Email</th>
-          <th>Phone Number</th>
-        </tr>
-        { data.map((drone, i) => {
-          return <OffenderRow 
-            offender={ drone } 
-            id = { i } 
-            key={ drone.id }
-          />
-        }) }
+        <thead>
+          <tr>
+            <th></th>
+            <th>Snapshot</th>
+            <th>Distance</th>
+            <th>Pilot ID</th>
+            <th>Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+          </tr>  
+        </thead>
+        <tbody>
+          { data.map((drone, i) => {
+            return (
+              <OffenderRow 
+                offender={ drone } 
+                index = { i } 
+                key={ drone.id }
+              />
+            );
+          }) }
+        </tbody>
       </table>
     </>
   );
