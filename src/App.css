@@ -1,5 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;400&display=swap');
+
 .App {
   text-align: center;
 }
 
+th,
+td {
+    border-bottom: 1px solid;
+    padding: 0.5em 1em 0.5em 1em;
+}
 
+th {
+    background-color: #dea176;
+    color: azure;
+    font-weight: 400;
+}
+
+table {
+    border-collapse: collapse;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 200;
+    width: auto;
+}
