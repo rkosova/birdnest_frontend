@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import getOffenders from './services/offenders';
 
 import OffenderTable from './components/OffenderTable';
+import Header from './components/Header';
 import { VictoryChart, VictoryAxis, VictoryScatter, VictoryTheme } from 'victory';
 
 const App = () => {
@@ -45,6 +46,8 @@ const App = () => {
 
   return (
     <div className='main'>
+
+      <Header />
       
       <div className='graph'>
 
