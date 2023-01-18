@@ -2,43 +2,25 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import getOffenders from './services/offenders';
 
-import OffenderRow from './components/OffenderRow'
+import OffenderTable from './components/OffenderTable'
 
 const App = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    getOffenders().then(data => setData(data));
+    const interval = setInterval(
+      () => getOffenders().then(data => setData(data)),
+      2000);
+
+    return () => {
+      clearInterval(interval);
+    };
   }, [])
 
 
   return (
     <>
-      <table className='offenderTable'>
-        <thead>
-          <tr>
-            <th></th>
-            <th>Snapshot</th>
-            <th>Distance</th>
-            <th>Pilot ID</th>
-            <th>Name</th>
-            <th>Last Name</th>
-            <th>Email</th>
-            <th>Phone Number</th>
-          </tr>  
-        </thead>
-        <tbody>
-          { data.map((drone, i) => {
-            return (
-              <OffenderRow 
-                offender={ drone } 
-                index = { i } 
-                key={ drone.id }
-              />
-            );
-          }) }
-        </tbody>
-      </table>
+      <OffenderTable offenders={ data } />
     </>
   );
 }
