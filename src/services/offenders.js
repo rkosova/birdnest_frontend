@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const url = "http://localhost:3001/birdnest";
+const url = "/birdnest";
 
 const getOffenders = () => {
     return axios
