@@ -4,11 +4,28 @@
   text-align: center;
 }
 
+body {
+  background-color: #1E2D2F;
+}
+
+th,
+td {
+  color: #EBEBEB;
+  border-bottom: 1px solid #EBEBEB;
+  padding: 0.2em 0.7em 0.2em 0.7em;
+}
+
+th {
+    background-color: #FF6700;
+    color: #EBEBEB;
+    font-weight: 400;
+}
+
 .header {
   font-family: 'Space Mono', monospace;
   font-weight: 400;
   letter-spacing: 0.3em;
-  color: #1E2D2F;
+  color: #FF6700;
   text-align: center;
 }
 
@@ -16,19 +33,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: start;
 }
 
-th,
-td {
-    border-bottom: 1px solid;
-    padding: 0.2em 0.7em 0.2em 0.7em;
-}
-
-th {
-    background-color: #dea176;
-    color: azure;
-    font-weight: 400;
-}
 
 .tableContainer {
   overflow-y: auto;
@@ -43,7 +50,4 @@ th {
   width: 100%;  
 }
 
-.graph {
-  height: 30em;
-  width: 30em;
-}
+

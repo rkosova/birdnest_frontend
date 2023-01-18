@@ -77,10 +77,10 @@ const App = () => {
             />
           <VictoryScatter
             style={ {
-              data: { fill: ({datum}) => datum.x === 250 && datum.y === 250 ? "#dea176" : "#f22d54" },
+              data: { fill: ({datum}) => datum.x === 250 && datum.y === 250 ? "#FF6700" : "#EBEBEB" },
               grid: { stroke: "none" }
               } }
-            size={ 4 }
+            size={ 3.5 }
             data={ posData }
           />
 
